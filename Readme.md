@@ -14,8 +14,6 @@ AND most importantly:
 1. Unit tests, mocks, e2e tests (ginko in example)
 
 
-alex.ermishkin@hubuc.com
-
 # Original task:
 ```
 A link to github with project that has 1 endpoint 

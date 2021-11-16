@@ -27,13 +27,16 @@ type ApiService struct {
 }
 
 func New(log *zap.Logger) (*ApiService, error) {
-
 	r := mux.NewRouter()
 
 	r.NotFoundHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusNotFound)
 	})
+
+	// TODO: add middleware (logging, rate limiting, etc)
+	// TODO: add configs sub-package
+	//
 
 	s := &ApiService{
 		log:    log,
